@@ -1,0 +1,53 @@
+{
+	"name": "t3-cloudflare-starter",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"deploy": "NEXT_PUBLIC_BETTER_AUTH_URL=https://t3-cloudflare-starter.pickboa.workers.dev opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+		"preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
+		"check": "biome check .",
+		"check:unsafe": "biome check --write --unsafe .",
+		"check:write": "biome check --write .",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:push": "drizzle-kit push",
+		"db:studio": "drizzle-kit studio"
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^1.0.0",
+		"@opennextjs/cloudflare": "^1.0.2",
+		"@t3-oss/env-nextjs": "^0.13.4",
+		"@tanstack/react-query": "^5.77.0",
+		"@trpc/client": "^11.1.2",
+		"@trpc/react-query": "^11.1.2",
+		"@trpc/server": "^11.1.2",
+		"@types/pg": "^8.15.2",
+		"better-auth": "^1.2.8",
+		"better-auth-cloudflare": "^0.1.2",
+		"drizzle-kit": "^0.31.1",
+		"drizzle-orm": "^0.43.1",
+		"next": "15.3.2",
+		"pg": "^8.16.0",
+		"postgres": "^3.4.7",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"sonner": "^2.0.3",
+		"superjson": "^2.2.2",
+		"zod": "^3.25.28"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^22.15.21",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"tailwindcss": "^4",
+		"typescript": "^5",
+		"wrangler": "^4.16.1"
+	}
+}
