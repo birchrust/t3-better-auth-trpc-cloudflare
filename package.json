@@ -28,7 +28,6 @@
 		"@trpc/server": "^11.1.2",
 		"@types/pg": "^8.15.2",
 		"better-auth": "^1.2.8",
-		"better-auth-cloudflare": "^0.1.2",
 		"drizzle-kit": "^0.31.1",
 		"drizzle-orm": "^0.43.1",
 		"next": "15.3.2",
